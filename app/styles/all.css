@@ -777,67 +777,105 @@ html {
   .offset-xl-11 {
     margin-left: 91.6666666667%; } }
 
-html, body {
-  background: #f0eacd;
-  font-family: 'Roboto', 'Helvetica', sans-serif; }
+html {
+  font-size: 1em; }
+
+body {
+  background-color: white;
+  font-family: 'Helvetica', 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #333; }
+
+p {
+  margin-bottom: 1.3em; }
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2; }
 
 h1 {
+  margin-top: 0;
   font-family: 'Amatic SC', cursive;
-  font-weight: normal;
-  color: #8c2100; }
+  font-size: 3.6em; }
+
+h2 {
+  font-size: 2.369em; }
+
+h3 {
+  font-size: 1.777em; }
+
+h4 {
+  font-size: 1.333em; }
+
+small, .font-small {
+  font-size: 0.75em; }
+
+.button {
+  background: #8c2100;
+  border: none;
+  color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.777em;
+  padding: 5px 20px; }
 
 body {
   margin: 0; }
 
-.hero {
-  padding: 15px;
+.hero, .benefit, .sponsor {
   display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px; }
-  @media (min-width: 576px) {
-    .hero {
-      margin-right: -15px;
-      margin-left: -15px; } }
-  @media (min-width: 768px) {
-    .hero {
-      margin-right: -15px;
-      margin-left: -15px; } }
-  @media (min-width: 992px) {
-    .hero {
-      margin-right: -15px;
-      margin-left: -15px; } }
-  @media (min-width: 1200px) {
-    .hero {
-      margin-right: -15px;
-      margin-left: -15px; } }
-  .hero .hero-image {
+  overflow: hidden; }
+  .hero .content, .benefit .content, .sponsor .content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    @media (min-width: 576px) {
+      .hero .content, .benefit .content, .sponsor .content {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 768px) {
+      .hero .content, .benefit .content, .sponsor .content {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 992px) {
+      .hero .content, .benefit .content, .sponsor .content {
+        margin-right: -15px;
+        margin-left: -15px; } }
+    @media (min-width: 1200px) {
+      .hero .content, .benefit .content, .sponsor .content {
+        margin-right: -15px;
+        margin-left: -15px; } }
+
+.hero {
+  background: #f0eacd;
+  padding: 15px 15px 50px 15px; }
+  .hero .content .hero-image {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 100%;
-    max-width: 100%;
     position: relative;
     height: 120px; }
     @media (min-width: 576px) {
-      .hero .hero-image {
+      .hero .content .hero-image {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 768px) {
-      .hero .hero-image {
+      .hero .content .hero-image {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 992px) {
-      .hero .hero-image {
+      .hero .content .hero-image {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 1200px) {
-      .hero .hero-image {
+      .hero .content .hero-image {
         padding-right: 15px;
         padding-left: 15px; } }
-    .hero .hero-image .bike {
+    .hero .content .hero-image .bike {
       position: absolute;
       height: 200px;
       top: 0;
@@ -845,31 +883,66 @@ body {
       width: 600px;
       background: transparent url("/images/ride-bike.png") no-repeat top left;
       background-size: contain; }
-  .hero .hero-content {
+  .hero .content .hero-content {
     position: relative;
     width: 100%;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 100%;
-    max-width: 100%; }
+    text-align: center; }
     @media (min-width: 576px) {
-      .hero .hero-content {
+      .hero .content .hero-content {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 768px) {
-      .hero .hero-content {
+      .hero .content .hero-content {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 992px) {
-      .hero .hero-content {
+      .hero .content .hero-content {
         padding-right: 15px;
         padding-left: 15px; } }
     @media (min-width: 1200px) {
-      .hero .hero-content {
+      .hero .content .hero-content {
         padding-right: 15px;
         padding-left: 15px; } }
-    .hero .hero-content h1 {
-      text-align: center;
-      font-size: 60px;
-      margin: 0; }
+    .hero .content .hero-content h1 {
+      margin: 0;
+      color: #8c2100; }
+    .hero .content .hero-content .logo {
+      padding-bottom: 40px; }
+      .hero .content .hero-content .logo p {
+        margin: 4px; }
+      .hero .content .hero-content .logo .amazon {
+        width: 100%;
+        height: 30px;
+        background: transparent url("/images/aws.png") no-repeat center center;
+        background-size: contain; }
+  @media (min-width: 576px) {
+    .hero .content .hero-image {
+      flex: 0 0 41.6666666667%;
+      max-width: 41.6666666667%; }
+    .hero .content .hero-content {
+      flex: 0 0 58.3333333333%;
+      max-width: 58.3333333333%;
+      text-align: left; }
+      .hero .content .hero-content h1, .hero .content .hero-content p, .hero .content .hero-content .logo {
+        text-align: left; }
+      .hero .content .hero-content h1 {
+        padding-top: 90px;
+        font-size: 5em; }
+      .hero .content .hero-content .logo .amazon {
+        background-position: left center; } }
+  @media (min-width: 768px) {
+    .hero .content .hero-image .bike {
+      top: 100px;
+      width: 800px;
+      height: 238px; }
+    .hero .content .hero-content h1 {
+      padding-top: 0; } }
+  @media (min-width: 992px) {
+    .hero .content {
+      background: greenyellow; } }
+
+.sponsor {
+  background: #f0eacd; }
