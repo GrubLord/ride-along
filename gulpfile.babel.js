@@ -255,6 +255,33 @@ gulp.task('generate-service-worker', ['copy-sw-scripts'], () => {
 // Run: `npm install --save-dev require-dir` from the command-line
 // try { require('require-dir')('tasks'); } catch (err) { console.error(err); }
 
+var gulpEbDeploy = require('gulp-elasticbeanstalk-deploy');
+
+gulp.task('deploy', function() {
+  return gulp.src([
+    'app/**/*',
+    'docs/**/*',
+    'dist/**/*',
+    'gulpfile.babel.js',
+    'package.json'
+  ], { base: './' })
+    .pipe(gulpEbDeploy({
+      name: 'ride-along', // optional: If not set, the name from package.json will be used
+      version: '1.0.0', // optional: If not set, the version from package.json will be used
+      timestamp: true, // optional: If set to false, the zip will not have a timestamp
+      waitForDeploy: true, // optional: if set to false the task will end as soon as it starts deploying
+      amazon: {
+        accessKeyId: "AKIAJKVNTQZKR6C5HLZQ", // optional
+        secretAccessKey: "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", // optional
+        signatureVersion: "v4", // optional
+        region: 'ap-southeast-2',
+        bucket: 'ride-along',
+        applicationName: 'Ride Along',
+        environmentName: 'ride-along'
+      }
+    }))
+})
+
 var awspublish = require('gulp-awspublish');
 
 gulp.task('publish', function() {
