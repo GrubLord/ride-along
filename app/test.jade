@@ -10,17 +10,56 @@ html
     link(rel='stylesheet', href='styles/all.css')
 
   body
+    header.header
+      ul
+        li
+          a(href='') Who are we?
+        li
+          a(href='') Contact Us
+      button.button Donate
     hero.hero
       .content
         .hero-image
           .bike
         .hero-content
           h1 {ride along /}
-          p Free event for school, partnering with aspirational tech firms to address the key IT curriculum for Australian students year 7-9
+          p A free programme for schools, partnering with aspirational tech companies to bring technology experts into classrooms, develop materials for teachers, and address the key IT curriculum for Australian students.
           .logo
-            p.font-small Powered by
+            p.font-small Proudly Sponsored by
             .amazon
-          button.button signup
+        .call-action
+          .card.pilot
+            .border
+              .image
+              p
+                | For
+                b  Teacher
+                | , apply for our
+              button.button Pilot Program
+          .card.partner
+            .border
+              .image
+              p
+                | For
+                b  Companies
+                | , become our
+              button.button Tech Partner
+          .card.mail
+            .border
+              .image
+              p
+                | Keep in touch with our
+                b  Annoucement
+              button.button Mailing List
+          .card.donate
+            .border
+              .image
+              p
+                | Help us by
+                b  donate
+                |  & support
+                b  UNICEF
+              button.button Donate
 
     benefit.benefit
       .content

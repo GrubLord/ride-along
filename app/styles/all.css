@@ -823,6 +823,25 @@ small, .font-small {
 body {
   margin: 0; }
 
+.header {
+  background: black;
+  padding: 10px 15px;
+  font-size: 0.75em;
+  display: flex;
+  justify-content: space-between; }
+  .header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .header ul li {
+      display: inline-block; }
+      .header ul li a {
+        color: #959595;
+        display: inline-block;
+        padding: 10px 10px 0 0; }
+  .header .button {
+    display: inline-block; }
+
 .hero, .benefit, .sponsor {
   display: flex;
   overflow: hidden; }
@@ -908,16 +927,55 @@ body {
         padding-left: 15px; } }
     .hero .content .hero-content h1 {
       margin: 0;
-      color: #8c2100; }
+      color: #8c2100;
+      white-space: nowrap; }
     .hero .content .hero-content .logo {
       padding-bottom: 40px; }
       .hero .content .hero-content .logo p {
-        margin: 4px; }
+        margin: 4px;
+        font-style: italic; }
       .hero .content .hero-content .logo .amazon {
         width: 100%;
         height: 30px;
         background: transparent url("/images/aws.png") no-repeat center center;
         background-size: contain; }
+  .hero .content .call-action {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    text-align: center; }
+    .hero .content .call-action > .card {
+      flex-basis: 100%;
+      border-radius: 40px;
+      background: #e2cc87;
+      padding: 5px;
+      margin-bottom: 15px; }
+      .hero .content .call-action > .card .border {
+        height: 100%;
+        border-radius: 40px;
+        border: 5px dashed white;
+        padding: 0 10px 20px 10px;
+        text-decoration: none; }
+        .hero .content .call-action > .card .border p {
+          margin: -10px 0 10px 0; }
+          .hero .content .call-action > .card .border p b {
+            color: #8c2100; }
+        .hero .content .call-action > .card .border .image {
+          height: 100px;
+          width: 100%;
+          background-color: transparent;
+          background-repeat: no-repeat;
+          background-position: top center;
+          background-size: contain; }
+      .hero .content .call-action > .card.pilot .border .image {
+        background-image: url("/images/pilot.png"); }
+      .hero .content .call-action > .card.partner .border .image {
+        background-image: url("/images/guide.png"); }
+      .hero .content .call-action > .card.mail .border .image {
+        background-image: url("/images/map.png"); }
+      .hero .content .call-action > .card.donate .border .image {
+        background-image: url("/images/unicef.png"); }
   @media (min-width: 576px) {
     .hero .content .hero-image {
       flex: 0 0 41.6666666667%;
@@ -929,20 +987,57 @@ body {
       .hero .content .hero-content h1, .hero .content .hero-content p, .hero .content .hero-content .logo {
         text-align: left; }
       .hero .content .hero-content h1 {
-        padding-top: 90px;
+        padding-top: 20px;
         font-size: 5em; }
       .hero .content .hero-content .logo .amazon {
-        background-position: left center; } }
+        background-position: left center; }
+    .hero .content .call-action > .card {
+      flex-basis: 48%; } }
   @media (min-width: 768px) {
     .hero .content .hero-image .bike {
-      top: 100px;
-      width: 800px;
-      height: 238px; }
+      top: 38px;
+      width: 900px;
+      height: 300px;
+      left: -37%; }
     .hero .content .hero-content h1 {
-      padding-top: 0; } }
+      padding-top: 0; }
+    .hero .content .call-action > .card {
+      flex-basis: 23%; } }
   @media (min-width: 992px) {
     .hero .content {
-      background: greenyellow; } }
+      max-width: 960px;
+      margin: 0 auto; }
+      .hero .content .hero-content {
+        padding-bottom: 100px; }
+      .hero .content .hero-image .bike {
+        top: 113px;
+        width: 1024px;
+        height: 400px;
+        left: -37%; }
+      .hero .content .call-action {
+        position: relative;
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        flex: 0 0 100%;
+        max-width: 100%; } }
+    @media (min-width: 992px) and (min-width: 576px) {
+      .hero .content .call-action {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 992px) and (min-width: 768px) {
+      .hero .content .call-action {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 992px) and (min-width: 992px) {
+      .hero .content .call-action {
+        padding-right: 15px;
+        padding-left: 15px; } }
+    @media (min-width: 992px) and (min-width: 1200px) {
+      .hero .content .call-action {
+        padding-right: 15px;
+        padding-left: 15px; } }
 
 .sponsor {
   background: #f0eacd; }

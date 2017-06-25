@@ -1,7 +1,8 @@
 
 $pastel: #f0eacd
 $darkred: #8c2100
-//$darkyellow: #efe9cc
+$grey: #959595
+$gold: #e2cc87
 
 
 
@@ -39,7 +40,6 @@ h1, h2, h3, h4
 
 h1
   margin-top: 0
-  //font-size: 3.157em
   font-family: 'Amatic SC', cursive
   font-size: $h1
 
@@ -72,6 +72,31 @@ body
 
 
 
+.header
+  background: black
+  padding: 10px 15px
+  font-size: $font-small
+  //*
+    border: 1px solid red
+  display: flex
+  justify-content: space-between
+
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    li
+      display: inline-block
+      a
+        color: $grey
+        display: inline-block
+        padding: 10px 10px 0 0
+
+
+  .button
+    display: inline-block
+
+
 
 
 
@@ -98,7 +123,6 @@ body
 
     .hero-image
       @include make-col-ready()
-      //@include make-col(12)
       position: relative
       height: 120px
       .bike
@@ -117,17 +141,67 @@ body
       h1
         margin: 0
         color: $darkred
+        white-space: nowrap
 
       .logo
         padding-bottom: 40px
         p
           margin: 4px
+          font-style: italic
 
         .amazon
           width: 100%
           height: 30px
           background: transparent url('/images/aws.png') no-repeat center center
           background-size: contain
+
+    .call-action
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 15px
+      text-align: center
+
+      > .card
+        flex-basis: 100%
+        border-radius: 40px
+        background: $gold
+        padding: 5px
+        margin-bottom: 15px
+        .border
+          height: 100%
+          border-radius: 40px
+          border: 5px dashed white
+          padding: 0 10px 20px 10px
+          text-decoration: none
+          p
+            margin: -10px 0 10px 0
+            b
+              color: $darkred
+          .image
+            height: 100px
+            width: 100%
+
+            background-color: transparent
+            background-repeat: no-repeat
+            background-position: top center
+
+            background-size: contain
+        &.pilot
+          .border .image
+            background-image: url('/images/pilot.png')
+        &.partner
+          .border .image
+            background-image: url('/images/guide.png')
+        &.mail
+          .border .image
+            background-image: url('/images/map.png')
+        &.donate
+          .border .image
+            background-image: url('/images/unicef.png')
+
+
+
 
     @include media-breakpoint-up(sm)
       .hero-image
@@ -138,24 +212,52 @@ body
         h1, p, .logo
           text-align: left
         h1
-          padding-top: 90px
+          padding-top: 20px
           font-size: $h0
         .logo .amazon
           background-position: left center
+      .call-action
+        > .card
+          flex-basis: 48%
 
 
     @include media-breakpoint-up(md)
+
       .hero-image
         .bike
-          top: 100px
-          width: 800px
-          height: 238px
+          top: 38px
+          width: 900px
+          height: 300px
+          left: -37%
       .hero-content
         h1
           padding-top: 0
+      .call-action
+        > .card
+          flex-basis: 23%
 
     @include media-breakpoint-up(lg)
-      background: greenyellow
+      max-width: 960px
+      margin: 0 auto
+      .hero-content
+        padding-bottom: 100px
+      .hero-image
+
+        .bike
+          top: 113px
+          width: 1024px
+          height: 400px
+          left: -37%
+        .hero-content
+
+      .call-action
+        @include make-col-ready()
+        @include make-col(12)
+
+    @include media-breakpoint-up(xl)
+
+      //background: greenyellow
+
 
 
 .benefit
@@ -166,7 +268,16 @@ body
 
 
 
-
+//    width: 895px;
+//    height: 282px;
+//    border: 1px solid red;
+//}
+//all.css?now=1498371503819:897
+//.hero .content .hero-image .bike {
+//  position: absolute;
+//  height: 200px;
+//  top: 0;
+//  left: -37%;
 
 
 
