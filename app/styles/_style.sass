@@ -101,7 +101,7 @@ body
 
 
 
-.hero, .benefit, .sponsor
+.hero
   display: flex
   overflow: hidden
   .content
@@ -112,9 +112,6 @@ body
 
 
 .hero
-
-  //*
-    border: 1px solid red
 
   background: $pastel
   padding: 15px 15px 50px 15px
@@ -308,13 +305,145 @@ body
       max-width: 960px
       margin: 0 auto
 
+
+
+
+
+
 .benefit
+  background: $pastel
+  margin: 0
+  display: block
+  padding-bottom: 30px
+
+  .content
+    h2
+      color: $darkred
+      font-family: 'Amatic SC', cursive
+      margin: 0
+      text-align: center
+      font-size: 50px
+      padding: 30px 0
+
+    .block
+      background: $gold
+      padding: 40px 20px 40px 20px
+
+      border: 5px dashed white
+      border-radius: 40px
+      margin-bottom: 40px
+
+      h4
+        font-weight: bold
+        margin: 0
+        font-family: 'Amatic SC', cursive
+        text-align: center
+        font-size: 40px
+        color: $darkred
+        padding-bottom: 15px
+
+      .stats
+        font-weight: lighter
+        padding-bottom: 30px
+        margin: 0 0 30px 0
+        text-align: center
+        font-size: 20px
+        //border-bottom: 5px dashed white
+
+        //&:after
+          display: block
+          content: ' '
+          border: 2.5px dashed white
+          width: 30%
+          margin: 20px auto
+
+      .descriptions
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin-bottom: 30px
+        padding: 0
+        > div
+          flex: 1 0 100%
+        .image
+          height: 200px
+          background-color: transparent
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: cover
+          margin-bottom: 20px
+        .column
+          .title
+            font-weight: bold
+            margin-top: 0
+      .quote-block
+        padding-top: 20px
+        font-style: italic
+        font-weight: lighter
+        text-align: center
+        .avatar
+          background-color: transparent
+          background-repeat: no-repeat
+          background-position: center center
+          background-size: contain
+          width: 80px
+          height: 80px
+          border-radius: 40px
+          margin: 0 auto 10px auto
+        p
+          margin: 0
+        .quote
+          font-size: 22px
+          margin-bottom: 20px
+        .name
+          font-size: 14px
+
+      &.connect-education
+        .image
+          background-image: url('/images/edutech/our-booth.jpg')
+        .quote-block
+          .avatar
+            background-image: url('/images/edutech/avatar.jpg')
+      &.aspiration-career
+        .image
+          background-image: url('/images/edutech/aspiring-career.jpg')
+        .quote-block
+          .avatar
+            background-image: url('/images/edutech/avatar2.jpg')
+      &.tangible-workshop
+        .image
+          background-image: url('/images/edutech/tangible-workshop.jpg')
+        .quote-block
+          .avatar
+            background-image: url('/images/edutech/avatar3.jpg')
+
+  +media-breakpoint-up(md)
+    .content
+      .block
+        .descriptions
+          padding: 0 20px
+          > div
+            flex: 0 1 30%
+          .image
+            height: auto
+
+  +media-breakpoint-up(lg)
+    .content
+      max-width: 960px
+      margin: 0 auto
 
 .sponsor
   background: $pastel
 
 
 
+.contact
+  background: $dark
+  padding: 20px 15px
+  h2
+    margin: 0 auto
+    font-family: 'Amatic SC', cursive
+    color: white
 
 
 

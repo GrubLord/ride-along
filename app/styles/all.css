@@ -842,28 +842,28 @@ body {
   .header .button {
     display: inline-block; }
 
-.hero, .benefit, .sponsor {
+.hero {
   display: flex;
   overflow: hidden; }
-  .hero .content, .benefit .content, .sponsor .content {
+  .hero .content {
     display: flex;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px; }
     @media (min-width: 576px) {
-      .hero .content, .benefit .content, .sponsor .content {
+      .hero .content {
         margin-right: -15px;
         margin-left: -15px; } }
     @media (min-width: 768px) {
-      .hero .content, .benefit .content, .sponsor .content {
+      .hero .content {
         margin-right: -15px;
         margin-left: -15px; } }
     @media (min-width: 992px) {
-      .hero .content, .benefit .content, .sponsor .content {
+      .hero .content {
         margin-right: -15px;
         margin-left: -15px; } }
     @media (min-width: 1200px) {
-      .hero .content, .benefit .content, .sponsor .content {
+      .hero .content {
         margin-right: -15px;
         margin-left: -15px; } }
 
@@ -1086,5 +1086,108 @@ body {
       max-width: 960px;
       margin: 0 auto; } }
 
+.benefit {
+  background: #f0eacd;
+  margin: 0;
+  display: block;
+  padding-bottom: 30px; }
+  .benefit .content h2 {
+    color: #8c2100;
+    font-family: 'Amatic SC', cursive;
+    margin: 0;
+    text-align: center;
+    font-size: 50px;
+    padding: 30px 0; }
+  .benefit .content .block {
+    background: #e2cc87;
+    padding: 40px 20px 40px 20px;
+    border: 5px dashed white;
+    border-radius: 40px;
+    margin-bottom: 40px; }
+    .benefit .content .block h4 {
+      font-weight: bold;
+      margin: 0;
+      font-family: 'Amatic SC', cursive;
+      text-align: center;
+      font-size: 40px;
+      color: #8c2100;
+      padding-bottom: 15px; }
+    .benefit .content .block .stats {
+      font-weight: lighter;
+      padding-bottom: 30px;
+      margin: 0 0 30px 0;
+      text-align: center;
+      font-size: 20px; }
+    .benefit .content .block .descriptions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+      padding: 0; }
+      .benefit .content .block .descriptions > div {
+        flex: 1 0 100%; }
+      .benefit .content .block .descriptions .image {
+        height: 200px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 20px; }
+      .benefit .content .block .descriptions .column .title {
+        font-weight: bold;
+        margin-top: 0; }
+    .benefit .content .block .quote-block {
+      padding-top: 20px;
+      font-style: italic;
+      font-weight: lighter;
+      text-align: center; }
+      .benefit .content .block .quote-block .avatar {
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        margin: 0 auto 10px auto; }
+      .benefit .content .block .quote-block p {
+        margin: 0; }
+      .benefit .content .block .quote-block .quote {
+        font-size: 22px;
+        margin-bottom: 20px; }
+      .benefit .content .block .quote-block .name {
+        font-size: 14px; }
+    .benefit .content .block.connect-education .image {
+      background-image: url("/images/edutech/our-booth.jpg"); }
+    .benefit .content .block.connect-education .quote-block .avatar {
+      background-image: url("/images/edutech/avatar.jpg"); }
+    .benefit .content .block.aspiration-career .image {
+      background-image: url("/images/edutech/aspiring-career.jpg"); }
+    .benefit .content .block.aspiration-career .quote-block .avatar {
+      background-image: url("/images/edutech/avatar2.jpg"); }
+    .benefit .content .block.tangible-workshop .image {
+      background-image: url("/images/edutech/tangible-workshop.jpg"); }
+    .benefit .content .block.tangible-workshop .quote-block .avatar {
+      background-image: url("/images/edutech/avatar3.jpg"); }
+  @media (min-width: 768px) {
+    .benefit .content .block .descriptions {
+      padding: 0 20px; }
+      .benefit .content .block .descriptions > div {
+        flex: 0 1 30%; }
+      .benefit .content .block .descriptions .image {
+        height: auto; } }
+  @media (min-width: 992px) {
+    .benefit .content {
+      max-width: 960px;
+      margin: 0 auto; } }
+
 .sponsor {
   background: #f0eacd; }
+
+.contact {
+  background: #404040;
+  padding: 20px 15px; }
+  .contact h2 {
+    margin: 0 auto;
+    font-family: 'Amatic SC', cursive;
+    color: white; }
