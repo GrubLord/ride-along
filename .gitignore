@@ -16,3 +16,7 @@ package-lock.json
 .idea/workspace.xml
 .idea/inspectionProfiles/Project_Default.xml
 app/config.codekit3
+app/.idea/app.iml
+app/.idea/encodings.xml
+app/.idea/modules.xml
+app/.idea/workspace.xml

@@ -1039,5 +1039,52 @@ body {
         padding-right: 15px;
         padding-left: 15px; } }
 
+.edutech {
+  background: #404040; }
+  .edutech .content {
+    color: white;
+    text-align: center;
+    padding: 15px; }
+    .edutech .content h2 {
+      font-family: 'Amatic SC', cursive; }
+    .edutech .content .edutech-logo {
+      background: transparent url("/images/edutech/edutech.png") no-repeat center center;
+      background-size: contain;
+      width: 100%;
+      height: 80px; }
+    .edutech .content ul.images {
+      margin: 0;
+      list-style-type: none;
+      padding: 50px 0 20px 0;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: 100%; }
+      .edutech .content ul.images li {
+        margin-bottom: 20px;
+        height: 150px;
+        flex: 1 0 100%;
+        border-radius: 40px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover; }
+        .edutech .content ul.images li:first-child {
+          background-image: url("/images/edutech/edutech.jpg"); }
+        .edutech .content ul.images li:nth-child(2) {
+          background-image: url("/images/edutech/our-booth.jpg"); }
+        .edutech .content ul.images li:nth-child(3) {
+          background-image: url("/images/edutech/boothes.jpg"); }
+  @media (min-width: 576px) {
+    .edutech .content ul.images li {
+      flex: 0 1 30%; } }
+  @media (min-width: 768px) {
+    .edutech .content ul.images li {
+      height: 200px; } }
+  @media (min-width: 992px) {
+    .edutech .content {
+      max-width: 960px;
+      margin: 0 auto; } }
+
 .sponsor {
   background: #f0eacd; }
